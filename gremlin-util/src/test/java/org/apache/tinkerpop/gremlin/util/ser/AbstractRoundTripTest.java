@@ -277,7 +277,7 @@ public abstract class AbstractRoundTripTest {
                     assertThat(m, reflectionEquals(emptyTraversalMetrics));
                 }},
                 new Object[] {"TraversalMetrics", traversalMetrics, (Consumer<TraversalMetrics>) m -> {
-                    assertEquals(m.toString(), traversalMetrics.toString());
+                    assertEquals(m.getMetrics().toString(), traversalMetrics.getMetrics().toString());
                     assertThat(m, reflectionEquals(traversalMetrics, "stepIndexedMetrics", "positionIndexedMetrics"));
                 }},
 
